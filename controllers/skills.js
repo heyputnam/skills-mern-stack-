@@ -17,7 +17,7 @@ async function index(req, res){
 async function create(req, res){
     try{
         await Skill.create(req.body);
-        res.status(201).json({msg: 'skill success'})
+        // res.status(201).json({msg: 'skill success'})
         index(req,res);
     }catch(error){
         res.status(404).json({error: 'something bad happen here'})
